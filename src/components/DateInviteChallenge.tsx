@@ -350,6 +350,18 @@ export default function DateInviteChallenge() {
                   <span>✨</span> <span>{selectedActivityObj?.icon} {selectedActivityObj?.label}</span>
                 </div>
               </div>
+
+              <motion.a
+                href={`https://wa.me/5511999999999?text=${encodeURIComponent(`Oi! Eu aceitei o seu convite! 🥰\n\n🗓️ Data: ${formattedDate}\n⏰ Horário: ${time}\n🍽️ Comida: ${selectedFoodObj?.label}\n✨ Atividade: ${selectedActivityObj?.label}\n\nTô pronta, gatinho! 🚙`)}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
+                className="w-full mt-6 bg-[#25D366] text-white font-bold tracking-wide uppercase py-4 rounded-xl shadow-md text-lg text-center flex items-center justify-center gap-2"
+              >
+                <span>MANDAR PRO MATHEUS</span>
+                <span className="text-2xl">📱</span>
+              </motion.a>
             </div>
           </motion.div>
         );
