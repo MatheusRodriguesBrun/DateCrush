@@ -1,0 +1,89 @@
+---
+import '../styles/global.css';
+import DateInviteChallenge from '../components/DateInviteChallenge';
+---
+
+<html lang="pt-BR">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Convite Especial</title>
+		
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+		
+		<style>
+			body {
+				font-family: 'Nunito', sans-serif;
+				background-color: #E24A3A;
+				overflow: hidden;
+			}
+			
+			/* Absolute pattern of dark blue/black hearts */
+			.hearts-pattern {
+				position: absolute;
+				top: 0;
+				left: 0;
+				right: 0;
+				bottom: 0;
+				pointer-events: none;
+				z-index: 0;
+				overflow: hidden;
+			}
+			
+			.heart {
+				position: absolute;
+				color: #1A2332;
+				font-size: 24px;
+				opacity: 0.15;
+				transform: rotate(-15deg);
+			}
+
+			/* Generate scattered hearts using nth-child for simplicity without JS */
+			.heart:nth-child(1) { top: 10%; left: 10%; font-size: 30px; transform: rotate(10deg); }
+			.heart:nth-child(2) { top: 20%; left: 80%; font-size: 20px; transform: rotate(-20deg); }
+			.heart:nth-child(3) { top: 40%; left: 15%; font-size: 40px; transform: rotate(15deg); }
+			.heart:nth-child(4) { top: 60%; left: 75%; font-size: 25px; transform: rotate(-5deg); }
+			.heart:nth-child(5) { top: 80%; left: 20%; font-size: 35px; transform: rotate(25deg); }
+			.heart:nth-child(6) { top: 85%; left: 85%; font-size: 28px; transform: rotate(-15deg); }
+			.heart:nth-child(7) { top: 50%; left: 50%; font-size: 22px; transform: rotate(5deg); }
+			.heart:nth-child(8) { top: 15%; left: 45%; font-size: 32px; transform: rotate(-10deg); }
+			.heart:nth-child(9) { top: 75%; left: 55%; font-size: 26px; transform: rotate(12deg); }
+			.heart:nth-child(10) { top: 30%; left: 30%; font-size: 29px; transform: rotate(-8deg); }
+			.heart:nth-child(11) { top: 5%; left: 90%; font-size: 20px; transform: rotate(18deg); }
+			.heart:nth-child(12) { top: 95%; left: 10%; font-size: 24px; transform: rotate(-22deg); }
+			.heart:nth-child(13) { top: 65%; left: 5%; font-size: 31px; transform: rotate(8deg); }
+			.heart:nth-child(14) { top: 35%; left: 95%; font-size: 27px; transform: rotate(-12deg); }
+			.heart:nth-child(15) { top: 90%; left: 40%; font-size: 33px; transform: rotate(20deg); }
+		</style>
+	</head>
+	<body class="w-full h-screen flex items-center justify-center p-4">
+		
+		<div class="hearts-pattern">
+			<div class="heart">💙</div>
+			<div class="heart">💙</div>
+			<div class="heart">💙</div>
+			<div class="heart">💙</div>
+			<div class="heart">💙</div>
+			<div class="heart">💙</div>
+			<div class="heart">💙</div>
+			<div class="heart">💙</div>
+			<div class="heart">💙</div>
+			<div class="heart">💙</div>
+			<div class="heart">💙</div>
+			<div class="heart">💙</div>
+			<div class="heart">💙</div>
+			<div class="heart">💙</div>
+			<div class="heart">💙</div>
+		</div>
+
+		<main class="w-full max-w-md h-[85vh] sm:h-[800px] bg-[#E24A3A]/0 rounded-[40px] shadow-2xl overflow-hidden relative z-10 border border-white/10 backdrop-blur-sm">
+			<!-- Injeta o componente React na ilha interativa em modo cliente -->
+			<DateInviteChallenge client:load />
+		</main>
+
+	</body>
+</html>
