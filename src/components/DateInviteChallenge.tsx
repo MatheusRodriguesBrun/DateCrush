@@ -352,7 +352,7 @@ export default function DateInviteChallenge() {
               </div>
 
               <motion.a
-                href={`https://wa.me/5511999999999?text=${encodeURIComponent(`Oi! Eu aceitei o seu convite! 🥰\n\n🗓️ Data: ${formattedDate}\n⏰ Horário: ${time}\n🍽️ Comida: ${selectedFoodObj?.label}\n✨ Atividade: ${selectedActivityObj?.label}\n\nTô pronta, gatinho! 🚙`)}`}
+                href={`https://wa.me/5551982241885?text=${encodeURIComponent(`Oi! Eu aceitei o seu convite! 🥰\n\n🗓️ Data: ${formattedDate}\n⏰ Horário: ${time}\n🍽️ Comida: ${selectedFoodObj?.label}\n✨ Atividade: ${selectedActivityObj?.label}\n\nTô pronta, gatinho! 🚙`)}`}
                 target="_blank"
                 rel="noopener noreferrer"
                 whileHover={{ scale: 1.03 }}
